@@ -28,7 +28,7 @@ def ModelLearning(X, y):
     for k, depth in enumerate([1, 3, 5, 10]):
         
         # Create a Decision tree regressor at max_depth = depth
-        regressor = RandomForestRegressor(n_estimators = 100, max_depth=depth, n_jobs = -1)
+        regressor = RandomForestRegressor(n_estimators = 200, max_depth=depth, n_jobs = -1)
         
         # Calculate the training and testing scores
         sizes, train_scores, test_scores = curves.learning_curve(regressor, X, y, \
